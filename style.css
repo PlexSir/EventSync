@@ -1,27 +1,216 @@
-body {
-    font-family: Arial, sans-serif;
+/* Load the Quicksand font from a local file */
+@font-face {
+    font-family: 'Quicksand';
+    src: url('Quicksand-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
 }
 
-h1 {
-   font-size: 24px;
+/* Apply a gradient background to the body */
+body {
+    background: linear-gradient(90deg, rgb(255, 166, 0), rgb(184, 112, 19));
+    background-size: 600% 600%;
+    animation: gradientAnimation 15s ease infinite;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Animate the gradient background */
+@keyframes gradientAnimation {
+    50% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* Style the header */
+header {
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Style the top right buttons */
+.Top-Right-Bars {
+    display: flex;
+    margin-left: auto; /* Push the buttons to the right */
+}
+
+.Top-Right-Bars button {
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0); /* Transparent background */
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    transition: all 0.2s ease-in-out;
+}
+
+.Top-Right-Bars button:hover, 
+button[type="submit"]:hover {
+    background-color: #c800fa; /* Purple hover color */
+    transform: translateY(-1px); /* Slight upward movement on hover */
+}
+
+/* Style the logo */
+.logo {
+    display: block;
+    margin: 0 auto; /* Center the logo horizontally */
+    width: 100%;
+    height: auto;
+}
+
+/* Adjust the logo size for larger screens */
+@media (min-width: 768px) {
+    .logo {
+        width: 50%; /* Adjust width for larger screens */
+    }
+}
+
+/* Style the search container */
+.search-container {
+    display: flex;
+    justify-content: center; /* Center the search bar horizontally */
+}
+
+.search-container input[type=text] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    width: 50%;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    margin-right: 2px;
+}
+
+/* Remove the outline from the search input */
+input[type=All] {
+    outline: none;
+}
+
+/* Style the placeholder text for the search input */
+input[type=All]::placeholder {
+    opacity: 0.5;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.search-container button:hover {
+    background-color: #c800fa;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+/* Style the login/signup and event maker containers */
+.login-signup-container,
+.Event-Maker-container {
+    background-color: rgb(255, 255, 255); 
+    padding: 0px;
+    border-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px auto; /* Center the containers horizontally */
+    margin-top: 160px;
+    max-width: 320px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Style the input fields in the login/signup and event maker containers */
+input[type=All] {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ffffff00; /* Transparent border */
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.137); /* Subtle shadow */
+    background-color: rgba(218, 241, 234, 0); /* Transparent background */
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    margin: 0.5px 0;
+    box-sizing: border-box;
     text-align: center;
 }
 
-#event-list {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.event {
-    background-color: #f2f2f2;
+/* Style the description input field with a larger height */
+input[type="All"][placeholder="Description"] {
     padding: 10px;
-    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid #ffffff00;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.137);
+    background-color: rgba(218, 241, 234, 0);
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    margin: 0.5px 0;
+    text-align: left;
+    height: 100px; /* Increased height for description input */
 }
 
-.event h2 {
-    margin-top: 0;
+/* Center the placeholder text in the description input field */
+input[type="All"][placeholder="Description"]::placeholder {
+    text-align: center;
 }
 
-.event p {
-    margin-bottom: 0;
+/* Style the buttons in the login/signup and event maker containers */
+.login-signup-container button,
+.Event-Maker-container button {
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0);
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+}
+
+.login-signup-container button:hover,
+.Event-Maker-container button:hover {
+    background-color: #c800fa;
+    color: #ffffff;
+    transform: translateY(0px); /* No vertical movement on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
+}
+
+/* Style the event bars */
+.event-bars {
+    padding: 8px;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    border-radius: 6px;
+    font-family: 'Quicksand', sans-serif;
+    margin: 1px 200px; /* Adjust margins as needed */
+}
+
+.event-bars button {
+    padding: 8px 15px;
+    background-color: rgba(255, 255, 255, 0);
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+    width: auto;
 }
