@@ -12,6 +12,8 @@ body {
     background-size: 600% 600%;
     animation: gradientAnimation 15s ease infinite;
     font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 /* Animate the gradient background */
@@ -29,76 +31,71 @@ body {
 
 /* Style the header */
 header {
-    padding: 20px 0px;
+    padding: 20px;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Style the top right buttons */
-.Top-Right-Bars {
-    display: flex;
-    margin-left: auto; /* Push the buttons to the right */
-}
-
 .Top-Right-Bars button {
     padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0); /* Transparent background */
+    background-color: rgba(255, 255, 255, 0.2);
     color: #ffffff;
     border: none;
     cursor: pointer;
     font-family: 'Quicksand', sans-serif;
     transition: all 0.2s ease-in-out;
+    margin-left: 10px;
+    border-radius: 20px;
 }
 
-.Top-Right-Bars button:hover, 
-button[type="submit"]:hover {
-    background-color: #c800fa; /* Purple hover color */
-    transform: translateY(-1px); /* Slight upward movement on hover */
+.Top-Right-Bars button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 /* Style the logo */
 .logo {
-    display: block;
-    margin: 0 auto; /* Center the logo horizontally */
-    width: 100%;
-    height: auto;
+    height: 50px;
 }
 
-/* Adjust the logo size for larger screens */
-@media (min-width: 768px) {
-    .logo {
-        width: 50%; /* Adjust width for larger screens */
-    }
+/* Style the hero section */
+.hero {
+    text-align: center;
+    color: #ffffff;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
 }
 
 /* Style the search container */
 .search-container {
     display: flex;
-    justify-content: center; /* Center the search bar horizontally */
+    justify-content: center;
+    margin-bottom: 40px;
 }
 
 .search-container input[type=text] {
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: none;
     width: 50%;
-    border-radius: 20px;
+    border-radius: 20px 0 0 20px;
     transition: all 0.2s ease-in-out;
     font-family: 'Quicksand', sans-serif;
     font-weight: 500;
-    margin-right: 2px;
-}
-
-/* Remove the outline from the search input */
-input[type=All] {
-    outline: none;
-}
-
-/* Style the placeholder text for the search input */
-input[type=All]::placeholder {
-    opacity: 0.5;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 14px;
 }
 
 .search-container button {
@@ -109,108 +106,74 @@ input[type=All]::placeholder {
     cursor: pointer;
     font-family: 'Quicksand', sans-serif;
     font-weight: 500;
-    border-radius: 20px;
+    border-radius: 0 20px 20px 0;
     transition: all 0.2s ease-in-out;
 }
 
 .search-container button:hover {
     background-color: #c800fa;
     color: #ffffff;
-    transform: translateY(-1px);
 }
 
-/* Style the login/signup and event maker containers */
-.login-signup-container,
-.Event-Maker-container {
-    background-color: rgb(255, 255, 255); 
-    padding: 0px;
-    border-radius: 0px;
+/* Style the features section */
+.features {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 100px auto; /* Center the containers horizontally */
-    margin-top: 160px;
-    max-width: 320px;
-    width: 100%;
-    box-sizing: border-box;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Style the input fields in the login/signup and event maker containers */
-input[type=All] {
-    padding: 5px;
-    font-size: 16px;
-    border: 1px solid #ffffff00; /* Transparent border */
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.137); /* Subtle shadow */
-    background-color: rgba(218, 241, 234, 0); /* Transparent background */
-    width: 100%;
-    transition: all 0.2s ease-in-out;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 500;
-    margin: 0.5px 0;
-    box-sizing: border-box;
+.feature {
     text-align: center;
+    margin: 20px;
+    max-width: 300px;
 }
 
-/* Style the description input field with a larger height */
-input[type="All"][placeholder="Description"] {
-    padding: 10px;
+.feature img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.feature p {
     font-size: 16px;
-    border: 1px solid #ffffff00;
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.137);
-    background-color: rgba(218, 241, 234, 0);
-    width: 100%;
-    transition: all 0.2s ease-in-out;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 500;
-    margin: 0.5px 0;
-    text-align: left;
-    height: 100px; /* Increased height for description input */
+    color: #666;
 }
 
-/* Center the placeholder text in the description input field */
-input[type="All"][placeholder="Description"]::placeholder {
-    text-align: center;
-}
-
-/* Style the buttons in the login/signup and event maker containers */
-.login-signup-container button,
-.Event-Maker-container button {
-    padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0);
-    color: #000000;
-    border: none;
-    cursor: pointer;
-    font-family: 'Quicksand', sans-serif;
-    transition: all 0.2s ease-in-out;
-    width: 100%;
-}
-
-.login-signup-container button:hover,
-.Event-Maker-container button:hover {
-    background-color: #c800fa;
+/* Style the footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
     color: #ffffff;
-    transform: translateY(0px); /* No vertical movement on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
+    padding: 20px;
+    text-align: center;
 }
 
-/* Style the event bars */
-.event-bars {
-    padding: 8px;
-    background-color: rgb(255, 255, 255);
-    color: #000000;
-    border-radius: 6px;
-    font-family: 'Quicksand', sans-serif;
-    margin: 1px 200px; /* Adjust margins as needed */
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
 }
 
-.event-bars button {
-    padding: 8px 15px;
-    background-color: rgba(255, 255, 255, 0);
-    color: #000000;
-    border: none;
-    cursor: pointer;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 14px;
+footer nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
     transition: all 0.2s ease-in-out;
-    width: auto;
+}
+
+footer nav ul li a:hover {
+    color: #c800fa;
 }
