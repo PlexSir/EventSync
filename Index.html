@@ -3,57 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Finder</title>
-    <link rel="stylesheet" href="Style.css">
+    <title>EventSync - Find Your Next Adventure</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            animation: fadeInDown 1s;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        header h1 span {
+            color: #ff6600;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ff6600;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s;
+        }
+
+        section h2 {
+            color: #ff6600;
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            animation: fadeInUp 1s;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="Top-Right-Bars">
-                <button>Login</button>
-                <button>Signup</button>
-            </div>
-        </nav>
-        <img class="logo" src="logo.png" alt="Event Finder Logo">
+    <header class="animate__animated animate__fadeInDown">
+        <h1>Event<span>Sync</span></h1>
     </header>
-    
+    <nav>
+        <a href="#" class="animate__animated animate__pulse animate__infinite">Home</a>
+        <a href="#" class="animate__animated animate__pulse animate__infinite">Events</a>
+        <a href="#" class="animate__animated animate__pulse animate__infinite">About</a>
+        <a href="#" class="animate__animated animate__pulse animate__infinite">Contact</a>
+    </nav>
     <main>
-        <section class="hero">
-            <h1>Discover Exciting Events</h1>
-            <p>Find and attend the best events near you</p>
-            <div class="search-container">
-                <input type="text" placeholder="Search for events">
-                <button type="submit">Search</button>
-            </div>
+        <section class="animate__animated animate__fadeInUp">
+            <h2>Welcome to EventSync</h2>
+            <p>Discover and explore exciting events happening near you. EventSync is your ultimate guide to finding the perfect event for any occasion.</p>
         </section>
-        
-        <section class="features">
-            <div class="feature">
-                <img src="feature1.png" alt="Feature 1">
-                <h3>Feature 1</h3>
-                <p>Description of Feature 1</p>
-            </div>
-            <div class="feature">
-                <img src="feature2.png" alt="Feature 2">
-                <h3>Feature 2</h3>
-                <p>Description of Feature 2</p>
-            </div>
-            <div class="feature">
-                <img src="feature3.png" alt="Feature 3">
-                <h3>Feature 3</h3>
-                <p>Description of Feature 3</p>
-            </div>
+        <section class="animate__animated animate__fadeInUp">
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>
+                    <h3>Music Festival</h3>
+                    <p>Experience the best in live music at our annual music festival.</p>
+                    <a href="#" class="animate__animated animate__pulse animate__infinite">Learn More</a>
+                </li>
+                <li>
+                    <h3>Food Truck Rally</h3>
+                    <p>Indulge in delicious street food from local food trucks.</p>
+                    <a href="#" class="animate__animated animate__pulse animate__infinite">Learn More</a>
+                </li>
+                <li>
+                    <h3>Art Exhibition</h3>
+                    <p>Explore the works of talented local artists at our art exhibition.</p>
+                    <a href="#" class="animate__animated animate__pulse animate__infinite">Learn More</a>
+                </li>
+            </ul>
         </section>
     </main>
-    
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
-        <p>&copy; 2023 Event Finder. All rights reserved.</p>
+    <footer class="animate__animated animate__fadeInUp">
+        <p>&copy; 2024 EventSync. All rights reserved.</p>
     </footer>
 </body>
 </html>
